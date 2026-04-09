@@ -91,4 +91,4 @@ async def to_code(config):
         sens = await sensor.new_sensor(config[CONF_EXPORT_ACTIVE_POWER])
         cg.add(var.set_export_power_sensor(sens))
 
-    cg.add_library("GuruxDLMS", None, "https://github.com/viric/GuruxDLMS.c#platformio")
+    cg.add_library("GuruxDLMS", None, "https://github.com/latonita/GuruxDLMS.c#platformio2")
