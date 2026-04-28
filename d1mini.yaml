@@ -7,5 +7,5 @@ light:
     name: "Status LED"
     pin:
       number: GPIO2
-      inverted: true
+      inverted: True
     internal: True

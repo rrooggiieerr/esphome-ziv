@@ -22,7 +22,7 @@ improv_serial:
 
 # Used to pull OTA updates
 http_request:
-  verify_ssl: false
+  verify_ssl: False
 
 ota:
   - platform: http_request

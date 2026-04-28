@@ -12,7 +12,7 @@ light:
     name: "Status LED"
     pin:
       number: GPIO7
-      inverted: true
+      inverted: True
     internal: True
 
 binary_sensor:

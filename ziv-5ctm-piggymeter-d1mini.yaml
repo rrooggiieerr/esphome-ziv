@@ -14,7 +14,7 @@ esphome:
   comment: "ZIV 5CTM Smart Meter"
   # Automatically add the mac address to the name
   # so you can use a single firmware for all devices
-  name_add_mac_suffix: true
+  name_add_mac_suffix: True
 
 # Enable logging
 logger:
