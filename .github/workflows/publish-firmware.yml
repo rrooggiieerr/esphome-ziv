@@ -16,7 +16,7 @@ jobs:
       files: |
         ziv-5ctm-piggymeter-c3miniv1.factory.yaml
         ziv-5ctm-piggymeter-c3miniv2.factory.yaml
-        #ziv-5ctm-piggymeter-d1mini.factory.yaml
+      #ziv-5ctm-piggymeter-d1mini.factory.yaml
       esphome-version: latest
       # combined-name: project-template
       #### Modify above here to match your project ####
