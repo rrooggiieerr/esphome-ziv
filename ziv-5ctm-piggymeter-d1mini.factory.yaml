@@ -1,7 +1,6 @@
 packages:
   # Include all of the core configuration
   core: !include ziv-5ctm-piggymeter-d1mini.yaml
-  factory_reset: !include factory_reset.yaml
 
 esphome:
   # This will allow for project identification,
@@ -16,11 +15,6 @@ esphome:
 dashboard_import:
   package_import_url: github://rrooggiieerr/esphome-ziv/ziv-5ctm-piggymeter-d1mini.yaml@master
 
-# Set up Bluetooth LE to allow the user
-# to provision wifi credentials to the device.
-esp32_improv:
-  authorizer: boot_button
-
 # Sets up the improv via serial client for Wi-Fi provisioning.
 # Handy if your device has a usb port for the user to add credentials when they first get it.
 improv_serial:
@@ -28,6 +22,7 @@ improv_serial:
 
 # Used to pull OTA updates
 http_request:
+  verify_ssl: false
 
 ota:
   - platform: http_request

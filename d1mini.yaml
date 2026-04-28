@@ -1,25 +1,11 @@
 esp8266:
   board: d1_mini
 
-wifi:
-
 light:
   - platform: status_led
     id: _status_led
     name: "Status LED"
-    pin: GPIO2
-    inverted: True
-    internal: True
-
-binary_sensor:
-  - platform: gpio
-    id: boot_button
-    name: "Boot button"
     pin:
-      number: GPIO9
-      mode:
-        input: True
-        pullup: True
-      inverted: True
-      ignore_strapping_warning: True
+      number: GPIO2
+      inverted: true
     internal: True
