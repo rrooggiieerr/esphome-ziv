@@ -1,0 +1,26 @@
+external_components:
+  #- source: github://viric/esphome-ziv
+  #  components: [ziv]
+  - source:
+      type: local
+      path: components
+    components: [ziv]
+
+uart:
+  - id: !extend mbus
+    baud_rate: 9600
+    data_bits: 8
+    parity: NONE
+    stop_bits: 1
+
+sensor:
+  - platform: ziv
+    update_interval: 60s
+    import_active_energy:
+      name: "Import active energy"
+    export_active_energy:
+      name: "Export active energy"
+    import_active_power:
+      name: "Import active power"
+    export_active_power:
+      name: "Export active power"

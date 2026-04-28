@@ -1,0 +1,52 @@
+esp32:
+  board: lolin_c3_mini
+
+wifi:
+
+light:
+  # Wemos C3 mini v2.1.0 uses an RGB LED
+  - platform: status_led
+    id: _status_led
+    name: "Status LED"
+    output: _status_output
+    internal: True
+  - platform: esp32_rmt_led_strip
+    id: _rgb_led
+    name: "RGB LED"
+    rgb_order: GRB
+    pin: GPIO7
+    num_leds: 1
+    chipset: ws2812
+    default_transition_length: 0s
+    internal: True
+
+output:
+  - platform: template
+    id: _status_output
+    type: binary
+    write_action:
+      - if:
+          condition:
+             lambda: return state == 0;
+          then:
+            - light.turn_off: 
+                id: _rgb_led
+          else:
+            - light.turn_on: 
+                id: _rgb_led
+                red: 1.0
+                green: 0.0
+                blue: 0.0
+                brightness: 30%
+
+binary_sensor:
+  - platform: gpio
+    id: boot_button
+    pin:
+      number: GPIO9
+      mode:
+        input: True
+        pullup: True
+      inverted: True
+      ignore_strapping_warning: True
+    internal: True

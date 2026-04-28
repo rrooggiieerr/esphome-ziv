@@ -1,0 +1,4 @@
+uart:
+  - id: mbus
+    tx_pin: GPIO5
+    rx_pin: GPIO4

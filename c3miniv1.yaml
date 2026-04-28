@@ -1,0 +1,29 @@
+esp32:
+  board: lolin_c3_mini
+
+wifi:
+ # Enable for Wemos C3 mini v1.0.0
+ # See https://www.wemos.cc/en/latest/c3/c3_mini_1_0_0.html#about-wifi
+ output_power: 8.5
+
+light:
+  - platform: status_led
+    id: _status_led
+    name: "Status LED"
+    pin:
+      number: GPIO7
+      inverted: true
+    internal: True
+
+binary_sensor:
+  - platform: gpio
+    id: boot_button
+    name: "Boot button"
+    pin:
+      number: GPIO9
+      mode:
+        input: True
+        pullup: True
+      inverted: True
+      ignore_strapping_warning: True
+    internal: True

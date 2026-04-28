@@ -1,0 +1,4 @@
+uart:
+  - id: mbus
+    tx_pin: GPIO15
+    rx_pin: GPIO13
