@@ -31,4 +31,4 @@ ota:
 update:
   - platform: http_request
     id: update_http_request
-    source: https://rrooggiieerr.github.io/esphome-ziv/firmware/ziv-5ctm-piggymeter-d1mini.manifest.json
+    source: https://rrooggiieerr.github.io/esphome-ziv/firmware/ziv-5ctm-pgm-d1m.manifest.json
