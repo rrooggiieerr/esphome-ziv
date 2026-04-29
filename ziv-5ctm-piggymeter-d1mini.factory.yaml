@@ -6,7 +6,7 @@ esphome:
   # This will allow for project identification,
   # configuration and updates.
   project:
-    name: viric.ziv-5ctm
+    name: viric.ziv-5ctm-piggymeter-d1mini
     version: dev # This will be replaced by the github workflows with the `release` version
 
 # This points to the public location of the yaml file that will be adopted.
@@ -31,4 +31,4 @@ ota:
 update:
   - platform: http_request
     id: update_http_request
-    source: https://rrooggiieerr.github.io/esphome-ziv/firmware/ziv-5ctm-pgm-d1m.manifest.json
+    source: https://rrooggiieerr.github.io/esphome-ziv/firmware/ziv-5ctm-piggymeter-d1mini.manifest.json
