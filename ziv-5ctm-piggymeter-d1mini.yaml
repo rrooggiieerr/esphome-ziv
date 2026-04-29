@@ -1,6 +1,6 @@
 # These substitutions allow the end user to override certain values
 substitutions:
-  name: "ziv-5ctm"
+  name: "ziv-5ctm-piggymeter-d1mini"
   friendly_name: "ZIV 5CTM Smart Meter"
 
 packages:
