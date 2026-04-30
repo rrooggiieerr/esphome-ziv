@@ -1,11 +1,11 @@
 # These substitutions allow the end user to override certain values
 substitutions:
-  name: "ziv-5ctm"
+  name: "ziv-5ctm-c3mv1-pgm"
   friendly_name: "ZIV 5CTM Smart Meter"
 
 packages:
-  c3mini: !include c3miniv2.yaml
-  piggymeter: !include piggymeter-c3mini.yaml
+  c3mini: !include c3miniv1.yaml
+  piggymeter: !include c3mini-piggymeter.yaml
   ziv-5ctm: !include ziv-5ctm.yaml
 
 esphome:

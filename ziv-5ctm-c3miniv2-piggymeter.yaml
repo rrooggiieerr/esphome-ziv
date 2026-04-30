@@ -1,11 +1,11 @@
 # These substitutions allow the end user to override certain values
 substitutions:
-  name: "ziv-5ctm"
+  name: "ziv-5ctm-c3mv2-pgm"
   friendly_name: "ZIV 5CTM Smart Meter"
 
 packages:
-  d1mini: !include d1mini.yaml
-  piggymeter: !include piggymeter-d1mini.yaml
+  c3mini: !include c3miniv2.yaml
+  piggymeter: !include c3mini-piggymeter.yaml
   ziv-5ctm: !include ziv-5ctm.yaml
 
 esphome:
@@ -15,6 +15,10 @@ esphome:
   # Automatically add the mac address to the name
   # so you can use a single firmware for all devices
   name_add_mac_suffix: True
+
+esp32:
+  framework:
+    type: esp-idf
 
 # Enable logging
 logger:
@@ -31,7 +35,6 @@ ota:
     id: ota_esphome
 
 wifi:
-  min_auth_mode: WPA2
   # Set up a wifi access point using the device name above
   ap:
 
