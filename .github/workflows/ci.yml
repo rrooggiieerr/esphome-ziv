@@ -22,9 +22,9 @@ jobs:
       matrix:
         #### Modify below here to match your project ####
         file:
-          - ziv-5ctm-piggymeter-c3miniv1
-          - ziv-5ctm-piggymeter-c3miniv1
-          #- ziv-5ctm-piggymeter-d1miniv
+          - ziv-5ctm-c3miniv1-piggymeter
+          - ziv-5ctm-c3miniv1-piggymeter
+          #- ziv-5ctm-d1miniv-piggymeter
         #### Modify above here to match your project ####
 
         esphome-version:
